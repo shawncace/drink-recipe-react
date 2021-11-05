@@ -25,7 +25,7 @@ body {
   color: rgba(255, 255, 255, 0.938);
 }
 
-.recipe-container {
+/* .recipe-container {
   font-family: "Poppins", sans-serif;
   height: 100px;
   width: 100px;
@@ -46,13 +46,28 @@ body {
   flex-direction: row;
   min-width: 800px;
   /* outline: 1px solid red; */
-  margin-top: 1rem;
+/* margin-top: 1rem;
   padding: 1rem;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+} */
+
+img {
+  height: 100px;
+  width: 100px;
+}
+
+.test-wrapper {
+  /* outline: 1px solid red; */
+  text-align: center;
+  min-width: 600px;
   border-top: 2px solid grey;
   border-bottom: 2px solid grey;
 }
 
-.popular-drink-container img {
-  height: 100px;
-  width: 100px;
+.img-container {
+  /* outline: 1px solid green; */
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-evenly;
 }

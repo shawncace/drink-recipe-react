@@ -9,7 +9,25 @@ const Header = () => {
     <>
       <h1 className='header'>The Drinktionary</h1>
 
-      <div className='pop-drink-wrapper'>
+      <div className='test-wrapper'>
+        <div>Pop drinks</div>
+        <div className="img-container">
+          <img src={margarita} alt="marg" />
+          <img src={margarita} alt="marg" />
+          <img src={margarita} alt="marg" />
+        </div>
+      </div>
+
+
+      
+      
+    </>
+  );
+}
+ 
+export default Header;
+
+{/* <div className='pop-drink-wrapper'>
       <div>Popular Cocktails</div>
       <div className="popular-drink-container">
         
@@ -21,10 +39,4 @@ const Header = () => {
         <img src={manhattan} alt="bloody mary" />
 
       </div>
-      </div>
-      
-    </>
-  );
-}
- 
-export default Header;
+      </div> */}
