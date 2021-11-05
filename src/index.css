@@ -22,7 +22,7 @@ body {
   margin-top: 1rem;
   font-size: 3rem;
   font-weight: bold;
-  color: rgba(235, 235, 235, 0.856);
+  color: rgba(255, 255, 255, 0.938);
 }
 
 .recipe-container {
@@ -30,4 +30,29 @@ body {
   height: 100px;
   width: 100px;
   background-color: blue;
+}
+
+.pop-drink-wrapper {
+  outline: 1px solid red;
+}
+
+.pop-drink-wrapper div {
+  text-align: center;
+}
+
+.popular-drink-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  min-width: 800px;
+  /* outline: 1px solid red; */
+  margin-top: 1rem;
+  padding: 1rem;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey;
+}
+
+.popular-drink-container img {
+  height: 100px;
+  width: 100px;
 }
