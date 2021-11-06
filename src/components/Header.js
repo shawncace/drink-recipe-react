@@ -10,19 +10,26 @@ const Header = () => {
       <h1 className='header'>The Drinktionary</h1>
 
       <div className='pop-drink-wrapper'>
-      <div>Popular Cocktails</div>
-      <div className="popular-drink-container">
+        <div>Popular Cocktails</div>
+        <div className="img-container">
+        
+        <div className="drink">
+          <img src={margarita} alt="margarita" />
+          <div>Margarita</div>
+        </div>
+
+        <div className="drink">
+          <img src={bloodymary} alt="bloody mary" />
+          <div>Bloody Mary</div>
+        </div>
         
         
-        <img src={margarita} alt="margarita" />
-        <img src={bloodymary} alt="bloody mary" />
         <img src={mimosa} alt="bloody mary" />
         <img src={oldfashioned} alt="bloody mary" />
         <img src={manhattan} alt="bloody mary" />
 
+        </div>
       </div>
-      </div>
-      
     </>
   );
 }
