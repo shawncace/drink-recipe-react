@@ -13,20 +13,31 @@ const Header = () => {
         <div>Popular Cocktails</div>
         <div className="img-container">
         
-        <div className="drink">
+        <div>
           <img src={margarita} alt="margarita" />
-          <div>Margarita</div>
+          <div className='popular-drink-name'>Margarita</div>
         </div>
 
-        <div className="drink">
+        <div>
           <img src={bloodymary} alt="bloody mary" />
-          <div>Bloody Mary</div>
+          <div className='popular-drink-name'>Bloody Mary</div>
+        </div>
+
+        <div>
+          <img src={mimosa} alt="mimosa" />
+          <div className='popular-drink-name'>Mimosa</div>
         </div>
         
+        <div>
+          <img src={oldfashioned} alt="old fashioned" />
+          <div className='popular-drink-name'>Old Fashioned</div>
+        </div>
         
-        <img src={mimosa} alt="bloody mary" />
-        <img src={oldfashioned} alt="bloody mary" />
-        <img src={manhattan} alt="bloody mary" />
+        <div>
+          <img src={manhattan} alt="manhattan" />
+          <div className='popular-drink-name'>Manhattan</div>
+        </div>
+        
 
         </div>
       </div>
