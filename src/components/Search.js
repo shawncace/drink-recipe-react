@@ -4,7 +4,21 @@ const Search = () => {
   const [searchValue, setSearchValue]=useState('')
 
   const handleClick=() =>{
+    if(searchValue === ''){
+      alert('gg')
+    }
     getDrink(searchValue)
+  }
+
+  function handleKeypress(e){
+    if(e.keyCode===13 || e.which ===13){
+      if(searchValue===''){
+        alert('gg')
+      }
+
+      getDrink(searchValue)
+     
+    }
   }
 
   const getDrink=async(searchValue)=>{
@@ -22,7 +36,8 @@ const Search = () => {
   
   return (  
     <div className='recipe-container'>
-      <input onChange={(event)=>setSearchValue(event.target.value)}/>
+      <input onChange={(event)=>setSearchValue(event.target.value)}
+             onKeyPress={handleKeypress}/>
       <button onClick={handleClick}>Go</button>
     </div>
   );
