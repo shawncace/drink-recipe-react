@@ -70,7 +70,7 @@ body {
 
 .recipe-container {
   font-family: "Poppins", sans-serif;
-  width: 500px;
+  min-width: 500px;
   height: 100px;
   background-color: rgb(28, 7, 48);
   display: flex;
@@ -112,14 +112,21 @@ body {
   font-family: inherit;
 }
 
+.find-drink-container button:active {
+  transform: scale(0.95);
+}
+
 .random-bev-btn {
-  font-family: inherit;
   background-color: rgb(212, 126, 27);
   border: none;
   border-radius: 10px;
-  padding: 0.25rem 0.5rem;
+  padding: 0.35rem 0.5rem;
   color: rgb(255, 255, 255);
   font-weight: bolder;
+}
+
+.random-bev-btn:active {
+  transform: scale(0.95);
 }
 
 /* The following rules are for after a drink has been searched for */
@@ -130,8 +137,27 @@ body {
   min-height: 100px;
   background-color: rgb(28, 7, 48);
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+
   border-radius: 20px;
   margin-top: 1rem;
+}
+
+.recipe-container-two img {
+  width: 200px;
+}
+
+.drink-name {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.drink-ingredients {
+  margin-left: 1rem;
+  font-size: 0.75rem;
+}
+
+.input-and-btn {
+  display: flex;
 }

@@ -80,16 +80,36 @@ const Search = () => {
       </div> */}
 
       <div className='recipe-container-two'>
-        <div className="find-drink-container">
-          <img src={drink.strDrinkThumb} alt=''/>
+       <img src={drink.strDrinkThumb} alt=''/>
+       
+       <div className="find-drink-container">
+          <div className="drink-name">
+            {drink.strDrink}
+          </div>  
+          <div className="drink-ingredients">
+            {drink.strIngredient1}
+            {drink.strIngredient2}
+            {drink.strIngredient3}
+            {drink.strIngredient4}
+            {drink.strIngredient5}
+            {drink.strIngredient6}
+            {drink.strIngredient7}
+            {drink.strIngredient8}
+            {drink.strIngredient9}
+          </div>
+          
+          <div className="input-and-btn">
           <input onChange={(event)=>setSearchValue(event.target.value)}
                 onKeyPress={handleKeypress}
                 placeholder='Name'/>
           <button onClick={handleClick}>GO</button>
+          <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
           </div>
 
-          <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
-      </div>
+          
+        </div>
+          </div>
+          
     </>
   );
 }
