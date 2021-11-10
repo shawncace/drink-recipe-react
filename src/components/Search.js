@@ -97,6 +97,9 @@ const Search = () => {
             {drink.strIngredient8}
             {drink.strIngredient9}
           </div>
+          <div className="drink-instructions">
+            {drink.strInstructions}
+          </div>
           
           <div className="input-and-btn">
           <input onChange={(event)=>setSearchValue(event.target.value)}

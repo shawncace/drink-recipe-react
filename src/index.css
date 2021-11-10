@@ -133,7 +133,9 @@ body {
 
 .recipe-container-two {
   font-family: "Poppins", sans-serif;
-  min-width: 500px;
+  /* min-width: 200px; */
+  max-width: 800px;
+
   min-height: 100px;
   background-color: rgb(28, 7, 48);
   display: flex;
@@ -144,6 +146,8 @@ body {
 
 .recipe-container-two img {
   width: 200px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .drink-name {
@@ -156,6 +160,11 @@ body {
 .drink-ingredients {
   margin-left: 1rem;
   font-size: 0.75rem;
+  color: rgb(255, 255, 255);
+}
+
+.drink-instructions {
+  margin-left: 1rem;
 }
 
 .input-and-btn {
