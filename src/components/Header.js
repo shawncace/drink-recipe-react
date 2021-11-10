@@ -4,7 +4,13 @@ import mimosa from '../images/mimosa.jpg'
 import oldfashioned from '../images/oldfashioned.jpg'
 import manhattan from '../images/manhattan.jpg'
 
+
+
 const Header = () => {
+  function imageClick(){
+    alert('t')
+  }
+
   return (  
     <>
       <h1 className='header'>The Drinktionary</h1>
@@ -13,7 +19,7 @@ const Header = () => {
         <div>Popular Cocktails</div>
         <div className="img-container">
         
-        <div>
+        <div onClick={imageClick}>
           <img src={margarita} alt="margarita" />
           <div className='popular-drink-name'>Margarita</div>
         </div>

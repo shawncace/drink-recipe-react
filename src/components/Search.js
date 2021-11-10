@@ -109,7 +109,7 @@ const Search = () => {
             <button className='go-btn' onClick={handleClick}>GO</button>
             </div>
           <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
-          <i className="far fa-star"></i>
+          <div><i className="far fa-star"></i></div>
           </div>
           
 
