@@ -87,26 +87,28 @@ const Search = () => {
             {drink.strDrink}
           </div>  
           <div className="drink-ingredients">
-            {drink.strIngredient1}
-            {drink.strIngredient2}
-            {drink.strIngredient3}
-            {drink.strIngredient4}
-            {drink.strIngredient5}
-            {drink.strIngredient6}
-            {drink.strIngredient7}
-            {drink.strIngredient8}
-            {drink.strIngredient9}
+            <span>{drink.strIngredient1}</span>
+            <span>{drink.strIngredient2}</span>
+            <span>{drink.strIngredient3}</span>
+            <span>{drink.strIngredient4}</span>
+            <span>{drink.strIngredient5}</span>
+            <span>{drink.strIngredient6}</span>
+            <span>{drink.strIngredient7}</span>
+            <span>{drink.strIngredient8}</span>
+            <span>{drink.strIngredient9}</span>
           </div>
           <div className="drink-instructions">
             {drink.strInstructions}
           </div>
           
           <div className="input-and-btn">
-          <input onChange={(event)=>setSearchValue(event.target.value)}
-                onKeyPress={handleKeypress}
-                placeholder='Name'/>
-          <button onClick={handleClick}>GO</button>
-          <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
+            <div className='input-and-go-container'>
+              <input onChange={(event)=>setSearchValue(event.target.value)}
+                  onKeyPress={handleKeypress}
+                  placeholder='Name'/>
+            <button className='go-btn' onClick={handleClick}>GO</button>
+            </div>
+          <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
           </div>
 
           

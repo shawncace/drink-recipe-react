@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  /* outline: 1px solid red; */
 }
 
 body {
@@ -102,22 +103,13 @@ body {
   outline: none;
 }
 
-.find-drink-container button {
-  background-color: rgb(196, 74, 196);
-  border: none;
-  border-radius: 8px;
-  padding: 0.25rem;
-  color: white;
-  font-weight: bold;
-  font-family: inherit;
-}
-
 .find-drink-container button:active {
   transform: scale(0.95);
 }
 
 .random-bev-btn {
   background-color: rgb(212, 126, 27);
+
   border: none;
   border-radius: 10px;
   padding: 0.35rem 0.5rem;
@@ -139,6 +131,7 @@ body {
   min-height: 100px;
   background-color: rgb(28, 7, 48);
   display: flex;
+  padding-right: 1rem;
 
   border-radius: 20px;
   margin-top: 1rem;
@@ -151,22 +144,62 @@ body {
 }
 
 .drink-name {
-  color: rgb(255, 255, 255);
+  /* color: rgb(9, 236, 65); */
+  color: white;
   font-size: 1.5rem;
   margin-top: 0.5rem;
   margin-left: 1rem;
+  font-weight: bolder;
 }
 
 .drink-ingredients {
   margin-left: 1rem;
+  margin-top: 0.25rem;
   font-size: 0.75rem;
-  color: rgb(255, 255, 255);
+  color: rgb(135, 253, 99);
+  /* outline: 1px solid red; */
+}
+
+.drink-ingredients span {
+  margin-right: 1rem;
 }
 
 .drink-instructions {
   margin-left: 1rem;
+  margin-top: 0.25rem;
+  color: white;
 }
 
 .input-and-btn {
   display: flex;
+  margin-left: 0.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.25rem;
+
+  /* outline: 1px solid red; */
+}
+
+.input-and-go-container {
+  /* margin-right: 2rem; */
+}
+
+.go-btn {
+  background-color: rgb(196, 74, 196);
+  border: none;
+  border-radius: 8px;
+  padding: 0.25rem;
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+}
+
+.random-bev-btn-two {
+  background-color: rgb(212, 126, 27);
+  border: none;
+  border-radius: 10px;
+  /* outline: 1px solid red; */
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  margin-left: 1.25rem;
+  padding: 0 0.25rem;
 }
