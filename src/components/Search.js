@@ -7,12 +7,15 @@ const Search = () => {
     setSearchValue,
     drink, setDrink, getDrink}=useContext(AppContext)
 
+  const [searchStarted, setSearchStarted]=useState(false)
+
   const handleClick=() =>{
     if(searchValue === ''){
       alert('gg')
     }
     
     getDrink(searchValue)
+    setSearchStarted(true)
   }
 
   function handleKeypress(e){
@@ -23,12 +26,13 @@ const Search = () => {
 
 
       getDrink(searchValue)
-     
+      setSearchStarted(true)
     }
   }
 
   const handleRandomClick = ()=>{
     getRandomDrink()
+    setSearchStarted(true)
   }
 
   
@@ -55,16 +59,18 @@ const Search = () => {
       <div className='section-title'>Search for a Drink
       </div>
 
-      <div className='recipe-container'>
+      {!searchStarted ? ( <div className='recipe-container'>
         <div className="find-drink-container">
           <input onChange={(event)=>setSearchValue(event.target.value)}
                 onKeyPress={handleKeypress}
                 placeholder='Name'/>
-          <button onClick={handleClick}>GO</button>
+          <button className='go-btn' onClick={handleClick}>GO</button>
           </div>
 
           <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
       </div> 
+
+      ):(
 
       <div className='recipe-container-two'>
        <img src={drink.strDrinkThumb} alt=''/>
@@ -105,6 +111,7 @@ const Search = () => {
           
         </div>
           </div>
+          )}
           
     </>
   );
