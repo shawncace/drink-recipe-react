@@ -27,7 +27,9 @@ const AppContextProvider = (props) => {
   return (  
     <AppContext.Provider
       value={{
+        drink,
         searchValue,
+        setDrink,
         setSearchValue,
         getDrink
       }}>

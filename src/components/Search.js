@@ -1,9 +1,11 @@
 import {useState} from 'react'
+import { AppContext } from '../Context'
+import { useContext } from 'react'
 
 const Search = () => {
-  const [searchValue, setSearchValue]=useState('')
-
-  const[drink, setDrink]=useState({})
+  const {searchValue,
+    setSearchValue,
+    drink, setDrink, getDrink}=useContext(AppContext)
 
   const handleClick=() =>{
     if(searchValue === ''){
@@ -29,22 +31,7 @@ const Search = () => {
     getRandomDrink()
   }
 
-  const getDrink=async(searchValue)=>{
-    const API_URL=`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`;
-
-    try{
-      const response = await fetch(API_URL)
-      const data = await response.json()
-
-      
-        console.log(data.drinks[0].strDrink)
-        setDrink(data.drinks[0])
-        
-        
-    } catch(error){
-      console.log(error)
-    }    
-  };
+  
 
   const getRandomDrink = async()=>{
     const API_URL='https://www.thecocktaildb.com/api/json/v1/1/random.php'
