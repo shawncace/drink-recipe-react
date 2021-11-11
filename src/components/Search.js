@@ -85,6 +85,7 @@ const Search = () => {
             <span>{drink.strIngredient9}</span>
           </div>
           <div className="drink-instructions">
+            {/* {drink.strInstructions && drink.strInstructions.substring(0,150)+'...'} */}
             {drink.strInstructions}
           </div>
           
