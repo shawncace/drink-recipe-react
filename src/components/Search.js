@@ -55,7 +55,7 @@ const Search = () => {
       <div className='section-title'>Search for a Drink
       </div>
 
-      {/* <div className='recipe-container'>
+      <div className='recipe-container'>
         <div className="find-drink-container">
           <input onChange={(event)=>setSearchValue(event.target.value)}
                 onKeyPress={handleKeypress}
@@ -64,7 +64,7 @@ const Search = () => {
           </div>
 
           <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
-      </div> */}
+      </div> 
 
       <div className='recipe-container-two'>
        <img src={drink.strDrinkThumb} alt=''/>

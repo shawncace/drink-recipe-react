@@ -2,6 +2,7 @@ import AppContextProvider
  from "./Context";
 import Header from "./components/Header";
 import Search from "./components/Search";
+import Favorites from "./components/Favorites";
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
       <div className='project-wrapper'>
         <Header />
         <Search />
+        <Favorites />
       </div>
     </AppContextProvider>
     
