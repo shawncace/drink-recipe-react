@@ -4,9 +4,16 @@ import mimosa from '../images/mimosa.jpg'
 import oldfashioned from '../images/oldfashioned.jpg'
 import manhattan from '../images/manhattan.jpg'
 
+import { AppContext } from '../Context'
+import { useContext } from 'react'
+
 
 
 const Header = () => {
+  const {searchValue,
+    setSearchValue,
+    getDrink}=useContext(AppContext)
+
   function imageClick(){
     alert('t')
   }
@@ -14,7 +21,7 @@ const Header = () => {
   return (  
     <>
       <h1 className='header'>The Drinktionary</h1>
-
+      
       <div className='pop-drink-wrapper'>
         <div>Popular Cocktails</div>
         <div className="img-container">
