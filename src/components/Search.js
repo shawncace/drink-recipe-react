@@ -4,10 +4,10 @@ import { useContext } from 'react'
 
 const Search = () => {
   const {searchValue,
-    setSearchValue,
+    setSearchValue, searchStarted,setSearchStarted,
     drink, setDrink, getDrink}=useContext(AppContext)
 
-  const [searchStarted, setSearchStarted]=useState(false)
+ 
 
   const handleClick=() =>{
     

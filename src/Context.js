@@ -33,6 +33,7 @@ const AppContextProvider = (props) => {
       value={{
         drink,
         searchValue,
+        searchStarted,
         setDrink,
         setSearchValue,
         setSearchStarted,
