@@ -12,11 +12,13 @@ import { useContext} from 'react'
 
 const Header = () => {
   const {searchValue,
-    setSearchValue,
+    setSearchValue, setSearchStarted,
     getDrink, drink, setDrink}=useContext(AppContext)
 
     function imageClick(e){
     getDrink(e.target.alt)
+    setSearchStarted(false)
+    
     
   }
 
@@ -26,6 +28,7 @@ const Header = () => {
       
       <div className='pop-drink-wrapper'>
         <div>Popular Cocktails</div>
+        
         <div className="img-container">
         
         <div onClick={imageClick}>

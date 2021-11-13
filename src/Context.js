@@ -5,9 +5,12 @@ export const AppContext = createContext()
 const AppContextProvider = (props) => {
   const [searchValue, setSearchValue]=useState('')
   const[drink, setDrink]=useState({})
+  const [searchStarted, setSearchStarted]=useState(false)
   
 
   const getDrink=async(searchValue)=>{
+
+    
     const API_URL=`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`;
 
     try{
@@ -16,6 +19,7 @@ const AppContextProvider = (props) => {
 
       
         console.log(data.drinks[0].strDrink)
+        
         setDrink(data.drinks[0])
         
         
@@ -31,6 +35,7 @@ const AppContextProvider = (props) => {
         searchValue,
         setDrink,
         setSearchValue,
+        setSearchStarted,
         getDrink
       }}>
         {props.children}

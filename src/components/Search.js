@@ -10,9 +10,7 @@ const Search = () => {
   const [searchStarted, setSearchStarted]=useState(false)
 
   const handleClick=() =>{
-    if(searchValue === ''){
-      alert('gg')
-    }
+    
     
     getDrink(searchValue)
     setSearchStarted(true)
@@ -20,9 +18,8 @@ const Search = () => {
 
   function handleKeypress(e){
     if(e.keyCode===13 || e.which ===13){
-      if(searchValue===''){
-        alert('gg')
-      }
+      
+      
 
 
       getDrink(searchValue)
