@@ -10,20 +10,28 @@ const Search = () => {
  
 
   const handleClick=() =>{
-    
+    if(searchValue ===''){
+      alert('Choose a drink')
+      return
+    }
     
     getDrink(searchValue)
     setSearchStarted(true)
+    setSearchValue('')
   }
 
   function handleKeypress(e){
     if(e.keyCode===13 || e.which ===13){
-      
+      if(searchValue===''){
+        alert('Choose a drink')
+        return
+      }
       
 
 
       getDrink(searchValue)
       setSearchStarted(true)
+      setSearchValue('')
     }
   }
 
@@ -95,6 +103,7 @@ const Search = () => {
           <div className="input-and-btn">
             <div className='input-and-go-container'>
               <input onChange={(event)=>setSearchValue(event.target.value)}
+                  value={searchValue}
                   onKeyPress={handleKeypress}
                   placeholder='Name'/>
             <button className='go-btn' onClick={handleClick}>GO</button>
