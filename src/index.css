@@ -38,6 +38,15 @@ body {
   padding-top: 0.25rem;
 }
 
+.search-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* outline: 1px solid red; */
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+}
+
 .section-title {
   font-family: "Poppins";
   color: #fff;

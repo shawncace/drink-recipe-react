@@ -15,9 +15,12 @@ const Search = () => {
       return
     }
     
+    
+    
     getDrink(searchValue)
     setSearchStarted(true)
     setSearchValue('')
+    setDrink([])
   }
 
   function handleKeypress(e){
@@ -32,6 +35,8 @@ const Search = () => {
       getDrink(searchValue)
       setSearchStarted(true)
       setSearchValue('')
+      setDrink([])
+      
     }
   }
 
@@ -61,63 +66,66 @@ const Search = () => {
   
   return (  
     <>
+     <section className='search-section'>
       <div className='section-title'>Search for a Drink
       </div>
 
-      {!searchStarted ? ( <div className='recipe-container'>
+      {!searchStarted ? ( 
+      <div className='recipe-container'>
         <div className="find-drink-container">
           <input onChange={(event)=>setSearchValue(event.target.value)}
-                onKeyPress={handleKeypress}
-                placeholder='Name'/>
-          <button className='go-btn' onClick={handleClick}>GO</button>
-          </div>
-
-          <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
-      </div> 
-
-      ):(
-
-      <div className='recipe-container-two'>
-       <img src={drink.strDrinkThumb} alt=''/>
-       
-       <div className="find-drink-container">
-          <div className="drink-name">
-            {drink.strDrink}
-          </div>  
-          <div className="drink-ingredients">
-            <span>{drink.strIngredient1}</span>
-            <span>{drink.strIngredient2}</span>
-            <span>{drink.strIngredient3}</span>
-            <span>{drink.strIngredient4}</span>
-            <span>{drink.strIngredient5}</span>
-            <span>{drink.strIngredient6}</span>
-            <span>{drink.strIngredient7}</span>
-            <span>{drink.strIngredient8}</span>
-            <span>{drink.strIngredient9}</span>
-          </div>
-          <div className="drink-instructions">
-            {/* {drink.strInstructions && drink.strInstructions.substring(0,150)+'...'} */}
-            {drink.strInstructions}
-          </div>
-          
-          <div className="input-and-btn">
-            <div className='input-and-go-container'>
-              <input onChange={(event)=>setSearchValue(event.target.value)}
-                  value={searchValue}
                   onKeyPress={handleKeypress}
                   placeholder='Name'/>
-            <button className='go-btn' onClick={handleClick}>GO</button>
-            </div>
-          <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
-          <div><i className="far fa-star"></i></div>
-          </div>
-          
-
-          
-          
+          <button className='go-btn' onClick={handleClick}>GO</button>
         </div>
+
+            <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
+        </div> 
+
+        ):(
+
+        <div className='recipe-container-two'>
+        <img src={drink.strDrinkThumb} alt=''/>
+        
+        <div className="find-drink-container">
+            <div className="drink-name">
+              {drink.strDrink}
+            </div>  
+            <div className="drink-ingredients">
+              <span>{drink.strIngredient1}</span>
+              <span>{drink.strIngredient2}</span>
+              <span>{drink.strIngredient3}</span>
+              <span>{drink.strIngredient4}</span>
+              <span>{drink.strIngredient5}</span>
+              <span>{drink.strIngredient6}</span>
+              <span>{drink.strIngredient7}</span>
+              <span>{drink.strIngredient8}</span>
+              <span>{drink.strIngredient9}</span>
+            </div>
+            <div className="drink-instructions">
+              {/* {drink.strInstructions && drink.strInstructions.substring(0,150)+'...'} */}
+              {drink.strInstructions}
+            </div>
+            
+            <div className="input-and-btn">
+              <div className='input-and-go-container'>
+                <input onChange={(event)=>setSearchValue(event.target.value)}
+                    value={searchValue}
+                    onKeyPress={handleKeypress}
+                    placeholder='Name'/>
+              <button className='go-btn' onClick={handleClick}>GO</button>
+              </div>
+            <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
+            <div><i className="far fa-star"></i></div>
+            </div>
+            
+
+            
+            
           </div>
-          )}
+            </div>
+            )}
+     </section> 
           
     </>
   );
