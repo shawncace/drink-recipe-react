@@ -27,6 +27,10 @@ const AppContextProvider = (props) => {
       console.log(error)
     }    
   };
+
+  function favoriteClick(){
+    alert('t')
+  }
   
   return (  
     <AppContext.Provider
@@ -37,7 +41,8 @@ const AppContextProvider = (props) => {
         setDrink,
         setSearchValue,
         setSearchStarted,
-        getDrink
+        getDrink,
+        favoriteClick
       }}>
         {props.children}
     </AppContext.Provider>

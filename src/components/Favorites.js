@@ -4,7 +4,7 @@ const Favorites = () => {
   const[favoriteDrinks, setFavoriteDrinks] = useState([])
 
   return (  
-    <section>
+    <section className='fav-section'>
       
       <div className='section-title'>
         Favorites
@@ -13,7 +13,17 @@ const Favorites = () => {
     
 
       <div className="favorites-container">
-        
+        <div className="fav-img">
+
+        </div>
+
+        <div className="fav-img">
+          
+        </div>
+
+        <div className="fav-img">
+          
+        </div>
       </div>
 
     </section>

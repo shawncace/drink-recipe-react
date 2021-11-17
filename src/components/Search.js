@@ -1,12 +1,12 @@
 import {useState} from 'react'
 import { AppContext } from '../Context'
 import { useContext } from 'react'
-import Favorites from './Favorites'
+
 
 const Search = () => {
   const {searchValue,
     setSearchValue, searchStarted,setSearchStarted,
-    drink, setDrink, getDrink}=useContext(AppContext)
+    drink, setDrink, getDrink, favoriteClick}=useContext(AppContext)
 
  
 
@@ -119,8 +119,10 @@ const Search = () => {
               <button className='go-btn' onClick={handleClick}>GO</button>
               </div>
             <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
-            <div><i className="far fa-star"></i></div>
+            <div onClick={favoriteClick}><i className="far fa-star"
+                    ></i></div>
             </div>
+            {/* <div><i class="fas fa-star"></i></div> */}
             
 
             

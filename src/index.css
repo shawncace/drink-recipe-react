@@ -218,7 +218,31 @@ body {
   margin-right: 1rem;
 }
 
-.fa-star {
+.far {
   font-size: 1.5rem;
   color: rgb(241, 207, 13);
+}
+
+.far:hover {
+  cursor: pointer;
+}
+
+.fas {
+  font-size: 1.5rem;
+
+  color: rgb(241, 207, 13);
+}
+
+.fav-section {
+  text-align: center;
+}
+
+.favorites-container {
+  display: flex;
+}
+
+.fav-img {
+  outline: 1px solid red;
+  height: 100px;
+  width: 100px;
 }
