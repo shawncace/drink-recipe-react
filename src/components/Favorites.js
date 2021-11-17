@@ -16,17 +16,16 @@ const Favorites = () => {
     
 
       <div className="favorites-container">
-        <div className="fav-img">
+        {favoriteDrinks.map((drink)=>(
+          <div className="fav-img">
+            <img src={drink.strDrinkThumb} alt='drink'/>
+          </div>
+        
+        
+        ))}
+        
 
-        </div>
-
-        <div className="fav-img">
-          
-        </div>
-
-        <div className="fav-img">
-          
-        </div>
+        
       </div>
 
     </section>
