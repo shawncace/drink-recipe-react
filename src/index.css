@@ -239,10 +239,17 @@ body {
 
 .favorites-container {
   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  /* outline: 1px solid red; */
+  max-width: 80vw;
 }
 
 .fav-img {
-  outline: 1px solid red;
-  height: 100px;
-  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
 }

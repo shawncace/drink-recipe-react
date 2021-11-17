@@ -31,7 +31,7 @@ const AppContextProvider = (props) => {
   const favoriteClick=()=>{
     const newDrink=[...favoriteDrinks, drink] 
     setFavoriteDrinks(newDrink)
-    alert(favoriteDrinks)
+    
   }
   
   return (  

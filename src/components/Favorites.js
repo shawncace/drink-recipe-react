@@ -17,8 +17,9 @@ const Favorites = () => {
 
       <div className="favorites-container">
         {favoriteDrinks.map((drink)=>(
-          <div className="fav-img">
+          <div className="img-container fav-img">
             <img src={drink.strDrinkThumb} alt='drink'/>
+            <div>{drink.strDrink}</div>
           </div>
         
         
