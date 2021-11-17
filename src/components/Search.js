@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import { AppContext } from '../Context'
 import { useContext } from 'react'
+import Favorites from './Favorites'
 
 const Search = () => {
   const {searchValue,
@@ -71,6 +72,7 @@ const Search = () => {
       </div>
 
       {!searchStarted ? ( 
+      
       <div className='recipe-container'>
         <div className="find-drink-container">
           <input onChange={(event)=>setSearchValue(event.target.value)}
@@ -81,7 +83,8 @@ const Search = () => {
 
             <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
         </div> 
-
+        
+        
         ):(
 
         <div className='recipe-container-two'>
@@ -123,10 +126,12 @@ const Search = () => {
             
             
           </div>
+          
             </div>
+            
             )}
      </section> 
-          
+     
     </>
   );
 }

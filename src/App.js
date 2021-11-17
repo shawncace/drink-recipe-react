@@ -11,7 +11,9 @@ function App() {
     <AppContextProvider>
       <div className='project-wrapper'>
         <Header />
+        
         <Search />
+        
         <Favorites />
       </div>
     </AppContextProvider>
