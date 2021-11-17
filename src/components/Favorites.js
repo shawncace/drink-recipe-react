@@ -1,7 +1,10 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { AppContext } from "../Context";
 
 const Favorites = () => {
-  const[favoriteDrinks, setFavoriteDrinks] = useState([])
+  const {searchValue,
+    setSearchValue, searchStarted,setSearchStarted,
+    drink, setDrink, getDrink, favoriteClick, favoriteDrinks}=useContext(AppContext)
 
   return (  
     <section className='fav-section'>
