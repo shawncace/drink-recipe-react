@@ -4,8 +4,11 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
   const [searchValue, setSearchValue]=useState('')
-  const[drink, setDrink]=useState({isFav:true,
-  })
+  const[drink, setDrink]=useState(
+    {
+      isFav:true,
+      id: Math.floor(Math.random()*1000)
+    })
   const [searchStarted, setSearchStarted]=useState(false)
   const[favoriteDrinks, setFavoriteDrinks] = useState([])
   // const[isFav, setIsFav]=useState(false)
@@ -44,8 +47,8 @@ const AppContextProvider = (props) => {
     
   }
 
-  const favPicClick = (e)=>{
-    alert(e.target.isFav)
+  const favPicClick = (id)=>{
+    // setFavoriteDrinks(favoriteDrinks.filter((drink)=> drink.id !== id))
   }
   
   return (  
