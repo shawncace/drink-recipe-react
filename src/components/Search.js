@@ -49,6 +49,7 @@ const Search = () => {
   
 
   const getRandomDrink = async()=>{
+    setDrink({isFav:true})
     const API_URL='https://www.thecocktaildb.com/api/json/v1/1/random.php'
 
     try{
@@ -57,7 +58,7 @@ const Search = () => {
 
       
         console.log(data.drinks[0].strDrink)
-        setDrink(data.drinks[0])
+        setDrink({...drink, ...data.drinks[0]})
         
         
     } catch(error){

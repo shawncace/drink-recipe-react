@@ -14,6 +14,7 @@ const AppContextProvider = (props) => {
   
 
   const getDrink=async(searchValue)=>{
+    setDrink({isFav:true})
     const API_URL=`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`;
 
     try{
@@ -21,6 +22,7 @@ const AppContextProvider = (props) => {
       const data = await response.json()
 
         console.log(data.drinks[0].strDrink)
+        
         
         setDrink({...drink, ...data.drinks[0]})
         
@@ -38,12 +40,12 @@ const AppContextProvider = (props) => {
     
     
     setFavoriteDrinks(newDrink) 
-
+    
     
   }
 
   const favPicClick = (e)=>{
-    alert(e.target)
+    alert(e.target.isFav)
   }
   
   return (  
