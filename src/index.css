@@ -80,7 +80,7 @@ body {
 
 .recipe-container {
   font-family: "Poppins", sans-serif;
-  min-width: 500px;
+  min-width: 80vw;
   height: 100px;
   background-color: rgb(28, 7, 48);
   display: flex;
@@ -239,7 +239,7 @@ body {
 
 .favorites-container {
   display: flex;
-  justify-content: space-between;
+
   flex-wrap: wrap;
 
   /* outline: 1px solid red; */
@@ -251,5 +251,12 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-right: 1.5rem;
+  margin-right: 0.2rem;
+  margin-left: 0.5rem;
+}
+
+.fav-drink-name {
+  color: white;
+  font-family: "Poppins";
+  font-size: 0.8rem;
 }

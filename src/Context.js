@@ -4,9 +4,11 @@ export const AppContext = createContext()
 
 const AppContextProvider = (props) => {
   const [searchValue, setSearchValue]=useState('')
-  const[drink, setDrink]=useState({})
+  const[drink, setDrink]=useState({isFav:true,
+  })
   const [searchStarted, setSearchStarted]=useState(false)
   const[favoriteDrinks, setFavoriteDrinks] = useState([])
+  // const[isFav, setIsFav]=useState(false)
 
   
   
@@ -20,7 +22,7 @@ const AppContextProvider = (props) => {
 
         console.log(data.drinks[0].strDrink)
         
-        setDrink(data.drinks[0])
+        setDrink({...drink, ...data.drinks[0]})
         
         
     } catch(error){
@@ -29,9 +31,19 @@ const AppContextProvider = (props) => {
   };
 
   const favoriteClick=()=>{
-    const newDrink=[...favoriteDrinks, drink] 
-    setFavoriteDrinks(newDrink)
     
+    
+
+    const newDrink=[...favoriteDrinks, drink] 
+    
+    
+    setFavoriteDrinks(newDrink) 
+
+    
+  }
+
+  const favPicClick = (e)=>{
+    alert(e.target)
   }
   
   return (  
@@ -46,7 +58,9 @@ const AppContextProvider = (props) => {
         setSearchStarted,
         setFavoriteDrinks,
         getDrink,
-        favoriteClick
+        favoriteClick,
+        favPicClick
+        // setIsFav
       }}>
         {props.children}
     </AppContext.Provider>
