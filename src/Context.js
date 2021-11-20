@@ -7,8 +7,8 @@ const AppContextProvider = (props) => {
   const[drink, setDrink]=useState({})
   const [searchStarted, setSearchStarted]=useState(false)
   const[favoriteDrinks, setFavoriteDrinks] = useState([])
-  // const[isFav, setIsFav]=useState(false)
-
+  const[starred,setStarred]=useState(false)
+ 
   
   
 
@@ -38,11 +38,18 @@ const AppContextProvider = (props) => {
     const test={...drink, id, isFav}
     const newDrink=[...favoriteDrinks, test] 
     setFavoriteDrinks(newDrink) 
+
+    setStarred(true)
+
   }
 
   const favPicClick = (id)=>{
     setFavoriteDrinks(favoriteDrinks.filter((drink)=> drink.id !== id))
   }
+
+  
+
+  
   
   return (  
     <AppContext.Provider
@@ -57,7 +64,9 @@ const AppContextProvider = (props) => {
         setFavoriteDrinks,
         getDrink,
         favoriteClick,
-        favPicClick
+        favPicClick,
+        
+       
         // setIsFav
       }}>
         {props.children}
