@@ -18,8 +18,11 @@ const Favorites = () => {
       <div className="favorites-container">
         {favoriteDrinks.map((drink, id)=>(
           <div className="img-container fav-img">
-            <img src={drink.strDrinkThumb} alt='drink'
-            onClick={favPicClick(id)}/>
+            <img src={drink.strDrinkThumb} 
+                 alt='drink'
+                 onClick={()=>favPicClick(drink.id)}
+                 key={drink.id}
+            />
             <div className='fav-drink-name'>{drink.strDrink}</div>
           </div>
         
