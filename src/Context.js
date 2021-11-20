@@ -7,7 +7,7 @@ const AppContextProvider = (props) => {
   const[drink, setDrink]=useState(
     {
       isFav:true,
-      id: Math.floor(Math.random()*1000)
+      
     })
   const [searchStarted, setSearchStarted]=useState(false)
   const[favoriteDrinks, setFavoriteDrinks] = useState([])
@@ -36,13 +36,19 @@ const AppContextProvider = (props) => {
   };
 
   const favoriteClick=()=>{
+    const id= Math.floor(Math.random()*1000)
+      
     
     
+    const test={...drink, id}
 
-    const newDrink=[...favoriteDrinks, drink] 
+    const newDrink=[...favoriteDrinks, test] 
     
     
     setFavoriteDrinks(newDrink) 
+   
+    
+    
     
     
   }
