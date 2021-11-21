@@ -6,7 +6,7 @@ import { useContext } from 'react'
 const Search = () => {
   const {searchValue,
     setSearchValue, searchStarted,setSearchStarted,
-    drink, setDrink, getDrink, favoriteClick,star }=useContext(AppContext)
+    drink, setDrink, getDrink, favoriteClick,starred, setStarred }=useContext(AppContext)
 
  
 
@@ -49,7 +49,8 @@ const Search = () => {
   
 
   const getRandomDrink = async()=>{
-    setDrink({isFav:true})
+    
+    
     const API_URL='https://www.thecocktaildb.com/api/json/v1/1/random.php'
 
     try{
@@ -120,10 +121,9 @@ const Search = () => {
               <button className='go-btn' onClick={handleClick}>GO</button>
               </div>
             <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
-            <div onClick={favoriteClick}
-                 
-            ><i className="far fa-star"
-                    ></i></div>
+            <div onClick={favoriteClick}>
+                          <i className="far fa-star"></i>
+                          </div> 
             </div>
             {/* <div><i class="fas fa-star"></i></div> */}
             
