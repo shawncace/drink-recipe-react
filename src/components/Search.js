@@ -121,9 +121,10 @@ const Search = () => {
               <button className='go-btn' onClick={handleClick}>GO</button>
               </div>
             <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
-            <div onClick={favoriteClick}>
-                          <i className="far fa-star"></i>
-                          </div> 
+            <button className='fav-btn' onClick={favoriteClick}>
+            <i class="fas fa-plus"></i>
+            Add Favorite
+            </button> 
             </div>
             {/* <div><i class="fas fa-star"></i></div> */}
             
