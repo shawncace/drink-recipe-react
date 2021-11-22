@@ -16,7 +16,6 @@ const Header = () => {
     getDrink, drink, setDrink}=useContext(AppContext)
 
     function imageClick(e){
-    
     getDrink(e.target.alt)
     setSearchStarted(true)
     

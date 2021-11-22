@@ -39,12 +39,18 @@ const AppContextProvider = (props) => {
     const newDrink=[...favoriteDrinks, test] 
     setFavoriteDrinks(newDrink) 
 
+    if(favoriteDrinks.some(drank=> drank.strDrink ===drink.strDrink)){
+      alert('t')
+    } else{
+      alert('f')
+    }
+
     
 
   }
 
-  const favPicClick = (id)=>{
-    setFavoriteDrinks(favoriteDrinks.filter((drink)=> drink.id !== id))
+  const favPicClick = (e)=>{
+    getDrink(e.target.alt)
     
     
   }
