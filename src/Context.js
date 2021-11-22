@@ -32,6 +32,11 @@ const AppContextProvider = (props) => {
   };
 
   const favoriteClick=()=>{
+    if(favoriteDrinks.some(drank=> drank.strDrink ===drink.strDrink)){
+      alert('that is already in favs')
+      return
+    } 
+    
     const id= Math.floor(Math.random()*1000)
     const isFav = true
     
@@ -39,11 +44,7 @@ const AppContextProvider = (props) => {
     const newDrink=[...favoriteDrinks, test] 
     setFavoriteDrinks(newDrink) 
 
-    if(favoriteDrinks.some(drank=> drank.strDrink ===drink.strDrink)){
-      alert('t')
-    } else{
-      alert('f')
-    }
+    
 
     
 
