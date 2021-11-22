@@ -55,6 +55,9 @@ const AppContextProvider = (props) => {
     
   }
 
+  // const favPicClick = (id)=>{
+  //   setFavoriteDrinks(favoriteDrinks.filter((drink)=> drink.id !== id))
+
  
 
   
