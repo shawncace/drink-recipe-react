@@ -8,7 +8,19 @@ const Search = () => {
     setSearchValue, searchStarted,setSearchStarted,
     drink, setDrink, getDrink, favoriteClick,starred, setStarred }=useContext(AppContext)
 
- 
+  
+  const [toggleStar, setToggleStar]=useState(false)
+
+  const favoritedClick = () =>{
+    favoriteClick()
+    setToggleStar(true)
+    
+  }
+
+  const otherClick = () =>{
+    setToggleStar(false)
+  }
+    
 
   const handleClick=() =>{
     if(searchValue ===''){
@@ -42,6 +54,7 @@ const Search = () => {
   }
 
   const handleRandomClick = ()=>{
+    
     getRandomDrink()
     setSearchStarted(true)
   }
@@ -73,21 +86,7 @@ const Search = () => {
       <div className='section-title'>Search for a Drink
       </div>
 
-      {!searchStarted ? ( 
       
-      <div className='recipe-container'>
-        <div className="find-drink-container">
-          <input onChange={(event)=>setSearchValue(event.target.value)}
-                  onKeyPress={handleKeypress}
-                  placeholder='Name'/>
-          <button className='go-btn' onClick={handleClick}>GO</button>
-        </div>
-
-            <button className='random-bev-btn' onClick={handleRandomClick}>Random Beverage</button>
-        </div> 
-        
-        
-        ):(
 
         <div className='recipe-container-two'>
         <img src={drink.strDrinkThumb} alt=''/>
@@ -120,13 +119,21 @@ const Search = () => {
                     placeholder='Name'/>
               <button className='go-btn' onClick={handleClick}>GO</button>
               </div>
-            <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
-            <button className='fav-btn' onClick={favoriteClick}>
-            <i class="fas fa-plus"></i>
-            Add Favorite
-            </button> 
+              <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
+              
+              {!toggleStar ? (<div>
+        <i onClick={favoritedClick}
+         className="far fa-star">
+        </i>
+      </div>)
+      :
+      (<div>
+        <i onClick={otherClick} className="fas fa-star">
+        </i>
+      </div>)}
+              
             </div>
-            {/* <div><i class="fas fa-star"></i></div> */}
+            
             
 
             
@@ -135,7 +142,7 @@ const Search = () => {
           
             </div>
             
-            )}
+            
      </section> 
      
     </>
