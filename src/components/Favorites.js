@@ -24,6 +24,7 @@ const Favorites = () => {
                  key={drink.id}
             />
             <div className='fav-drink-name'>{drink.strDrink}</div>
+            
           </div>
         
         
