@@ -7,6 +7,7 @@ const AppContextProvider = (props) => {
   const[drink, setDrink]=useState({})
   const [searchStarted, setSearchStarted]=useState(false)
   const[favoriteDrinks, setFavoriteDrinks] = useState([])
+  const [starred, setStarred]=useState(false)
   
  
   
@@ -32,6 +33,7 @@ const AppContextProvider = (props) => {
   };
 
   const favoriteClick=()=>{
+    setStarred(true)
     if(favoriteDrinks.some(drank=> drank.strDrink ===drink.strDrink)){
       alert('that is already in favs')
       return
@@ -48,6 +50,10 @@ const AppContextProvider = (props) => {
 
     
 
+  }
+
+  const otherClick=()=>{
+    alert('t')
   }
 
   const favPicClick = (e)=>{

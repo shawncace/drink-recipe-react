@@ -235,9 +235,14 @@ body {
   cursor: pointer;
 }
 
+.far {
+  color: gold;
+  font-size: 1.5rem;
+}
+
 .fas {
   font-size: 1.5rem;
-  color: white;
+  color: gold;
   margin-right: 0.5rem;
 }
 

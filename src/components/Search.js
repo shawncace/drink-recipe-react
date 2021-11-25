@@ -6,10 +6,10 @@ import { useContext } from 'react'
 const Search = () => {
   const {searchValue,
     setSearchValue, searchStarted,setSearchStarted,
-    drink, setDrink, getDrink, favoriteClick,starred, setStarred }=useContext(AppContext)
+    drink, setDrink, getDrink, favoriteClick,otherClick}=useContext(AppContext)
 
  
-
+  const [toggleStar, setToggleStar]=useState(false)
   const handleClick=() =>{
     if(searchValue ===''){
       alert('Choose a drink')
@@ -121,14 +121,19 @@ const Search = () => {
               <button className='go-btn' onClick={handleClick}>GO</button>
               </div>
             <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
-            <button className='fav-btn' onClick={favoriteClick}>
-            <i class="fas fa-plus"></i>
-            Add Favorite
-            </button> 
-            </div>
-            {/* <div><i class="fas fa-star"></i></div> */}
             
-
+            {!toggleStar ? (<div>
+        <i onClick={favoriteClick}
+         className="far fa-star">
+        </i>
+      </div>)
+      :
+      (<div>
+        <i onClick={otherClick} className="fas fa-star">
+        </i>
+      </div>)}
+            
+        </div>
             
             
           </div>
