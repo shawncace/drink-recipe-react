@@ -30,6 +30,8 @@ const AppContextProvider = (props) => {
     } catch(error){
       console.log(error)
     };
+
+    
   };
 
   const favoriteClick=()=>{
@@ -53,11 +55,13 @@ const AppContextProvider = (props) => {
   }
 
   const otherClick=()=>{
-    alert('t')
+    setFavoriteDrinks(favoriteDrinks.filter((drank)=> drank.strDrink !== drink.strDrink))
+    setToggleStar(false)
   }
 
   const favPicClick = (e)=>{
     getDrink(e.target.alt)
+    setToggleStar(true)
     
     
   }
@@ -86,7 +90,8 @@ const AppContextProvider = (props) => {
         favoriteClick,
         favPicClick,
         toggleStar,
-        setToggleStar
+        setToggleStar,
+        otherClick
         
        
         // setIsFav

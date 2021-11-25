@@ -68,6 +68,7 @@ const Search = () => {
     } catch(error){
       console.log(error)
     }
+    setToggleStar(false)
   }
   
   return (  
@@ -132,7 +133,7 @@ const Search = () => {
       </div>)
       :
       (<div>
-        <i onClick={favoriteClick} className="fas fa-star">
+        <i onClick={otherClick} className="fas fa-star">
         </i>
       </div>)}
             
