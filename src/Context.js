@@ -28,7 +28,7 @@ const AppContextProvider = (props) => {
         
     } catch(error){
       console.log(error)
-    }    
+    };
   };
 
   const favoriteClick=()=>{
