@@ -6,18 +6,21 @@ import { useContext } from 'react'
 const Search = () => {
   const {searchValue,
     setSearchValue, searchStarted,setSearchStarted,
-    drink, setDrink, getDrink, favoriteClick,otherClick}=useContext(AppContext)
+    drink, setDrink, getDrink, favoriteClick,otherClick,toggleStar, setToggleStar}=useContext(AppContext)
 
  
-  const [toggleStar, setToggleStar]=useState(false)
+  
+  
+  // function favoritedClick(){
+  //   favoriteClick()
+  //   setToggleStar(true)
+  // }
+
   const handleClick=() =>{
     if(searchValue ===''){
       alert('Choose a drink')
       return
     }
-    
-    
-    
     getDrink(searchValue)
     setSearchStarted(true)
     setSearchValue('')
@@ -129,7 +132,7 @@ const Search = () => {
       </div>)
       :
       (<div>
-        <i onClick={otherClick} className="fas fa-star">
+        <i onClick={favoriteClick} className="fas fa-star">
         </i>
       </div>)}
             
