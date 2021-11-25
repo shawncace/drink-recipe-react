@@ -61,7 +61,7 @@ const AppContextProvider = (props) => {
 
   const favPicClick = (e)=>{
     getDrink(e.target.alt)
-    setToggleStar(true)
+    setToggleStar(true);
     
     
   }
