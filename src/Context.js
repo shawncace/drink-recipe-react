@@ -56,7 +56,7 @@ const AppContextProvider = (props) => {
 
   const otherClick=()=>{
     setFavoriteDrinks(favoriteDrinks.filter((drank)=> drank.strDrink !== drink.strDrink))
-    setToggleStar(false)
+    setToggleStar(false);
   }
 
   const favPicClick = (e)=>{
