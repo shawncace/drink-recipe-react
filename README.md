@@ -6,6 +6,8 @@ It's 5 o'clock somewhere! Search The Drinktionary for recipes to your favorite b
 
 <ul>
   <li>State management with Context</li><br>
+  
+  <li>CSS-only design, no CSS libraries</li><br>
 
   <li>Separate and reusable components</li>
 </ul>
