@@ -21,6 +21,7 @@ const Search = () => {
       alert('Choose a drink')
       return
     }
+    setToggleStar(false)
     getDrink(searchValue)
     setSearchStarted(true)
     setSearchValue('')
@@ -35,7 +36,7 @@ const Search = () => {
       }
       
 
-
+      setToggleStar(false)
       getDrink(searchValue)
       setSearchStarted(true)
       setSearchValue('')
