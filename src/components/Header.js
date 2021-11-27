@@ -23,7 +23,10 @@ const Header = () => {
     getDrink, drink, setDrink, setToggleStar, favoriteDrinks}=useContext(AppContext)
 
     function imageClick(e){
-    
+    //BUG: if the popular drink is already in favoriteDrinks array and you click on the image from the Popular Drinks section rather than the Favorites section then the star is not toggled correctly. 
+
+    setToggleStar(false)
+
     getDrink(e.target.alt)
     
     setSearchStarted(true)
