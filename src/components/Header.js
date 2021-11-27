@@ -20,10 +20,12 @@ import { useContext} from 'react'
 const Header = () => {
   const {searchValue,
     setSearchValue, setSearchStarted,
-    getDrink, drink, setDrink}=useContext(AppContext)
+    getDrink, drink, setDrink, setToggleStar, favoriteDrinks}=useContext(AppContext)
 
     function imageClick(e){
+    
     getDrink(e.target.alt)
+    
     setSearchStarted(true)
     
     
@@ -40,22 +42,22 @@ const Header = () => {
         <div className="img-container">
         
         <div onClick={imageClick}>
-          <img src={margarita2} alt="margarita" />
+          <img src={margarita2} alt="Margarita" />
           <div className='popular-drink-name'>Margarita</div>
         </div>
 
         <div onClick={imageClick}> 
-          <img src={bloodymary2} alt="bloody mary" />
+          <img src={bloodymary2} alt="Bloody Mary" />
           <div className='popular-drink-name'>Bloody Mary</div>
         </div>
 
         <div onClick={imageClick}>
-          <img src={mimosa2} alt="mimosa" />
+          <img src={mimosa2} alt="Mimosa" />
           <div className='popular-drink-name'>Mimosa</div>
         </div>
         
         <div onClick={imageClick}>
-          <img src={oldfashioned2} alt="old fashioned" />
+          <img src={oldfashioned2} alt="Old Fashioned" />
           <div className='popular-drink-name'>Old Fashioned</div>
         </div>
         
