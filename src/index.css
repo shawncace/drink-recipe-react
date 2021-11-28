@@ -90,9 +90,6 @@ body {
   margin-top: 1rem;
 }
 
-.find-drink-container {
-}
-
 .find-drink-container input {
   background-color: rgb(196, 74, 196);
   border: none;
@@ -190,10 +187,6 @@ body {
   margin-bottom: 0.25rem;
 
   /* outline: 1px solid red; */
-}
-
-.input-and-go-container {
-  /* margin-right: 2rem; */
 }
 
 .go-btn {

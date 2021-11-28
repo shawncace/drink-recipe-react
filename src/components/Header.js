@@ -1,8 +1,4 @@
-import margarita from '../images/margarita.jpg'
-import bloodymary from '../images/bloodymary.jpg'
-import mimosa from '../images/mimosa.jpg'
-import oldfashioned from '../images/oldfashioned.jpg'
-import manhattan from '../images/manhattan.jpg'
+
 
 import margarita2 from '../images/margarita2.png'
 import bloodymary2 from '../images/bloodymary2.png'
@@ -18,9 +14,8 @@ import { useContext} from 'react'
 
 
 const Header = () => {
-  const {searchValue,
-    setSearchValue, setSearchStarted,
-    getDrink, drink, setDrink, setToggleStar, favoriteDrinks}=useContext(AppContext)
+  const {setSearchStarted,
+    getDrink, setToggleStar, favoriteDrinks}=useContext(AppContext)
 
     function imageClick(e){
     if(favoriteDrinks.some(drank=> drank.strDrink ===e.target.alt)){
