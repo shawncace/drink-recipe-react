@@ -1,9 +1,9 @@
 
 
-import margarita2 from '../images/margarita2.png'
-import bloodymary2 from '../images/bloodymary2.png'
-import mimosa2 from '../images/mimosa2.png'
-import oldfashioned2 from '../images/oldfashioned2.png'
+import margarita from '../images/margarita2.png'
+import bloodymary from '../images/bloodymary2.png'
+import mimosa from '../images/mimosa2.png'
+import oldfashioned from '../images/oldfashioned2.png'
 
 
 
@@ -44,22 +44,22 @@ const Header = () => {
         <div className="img-container">
         
         <div onClick={imageClick}>
-          <img src={margarita2} alt="Margarita" />
+          <img src={margarita} alt="Margarita" />
           <div className='popular-drink-name'>Margarita</div>
         </div>
 
         <div onClick={imageClick}> 
-          <img src={bloodymary2} alt="Bloody Mary" />
+          <img src={bloodymary} alt="Bloody Mary" />
           <div className='popular-drink-name'>Bloody Mary</div>
         </div>
 
         <div onClick={imageClick}>
-          <img src={mimosa2} alt="Mimosa" />
+          <img src={mimosa} alt="Mimosa" />
           <div className='popular-drink-name'>Mimosa</div>
         </div>
         
         <div onClick={imageClick}>
-          <img src={oldfashioned2} alt="Old Fashioned" />
+          <img src={oldfashioned} alt="Old Fashioned" />
           <div className='popular-drink-name'>Old Fashioned</div>
         </div>
         
