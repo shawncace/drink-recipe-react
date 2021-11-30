@@ -199,6 +199,11 @@ body {
   font-family: inherit;
 }
 
+.random-btn-and-fav-btn {
+  display: flex;
+  align-items: center;
+}
+
 .random-bev-btn-two {
   background-color: rgb(212, 126, 27);
   border: none;
@@ -281,19 +286,25 @@ body {
     flex-wrap: wrap;
   }
 
+  .recipe-container-two img {
+    width: 150px;
+    border-radius: 20px;
+    margin-top: 0.25rem;
+  }
+
   .popular-drink-name {
     margin-bottom: 1.5rem;
   }
 
   .recipe-container {
-    /* outline: 1px solid red; */
     display: flex;
     flex-direction: column;
   }
 
   .find-drink-container {
-    /* outline: solid red; */
     width: 90%;
+
+    /* outline: 1px solid red; */
   }
 
   .find-drink-container input {
@@ -302,5 +313,37 @@ body {
 
   .random-bev-btn {
     width: 75%;
+  }
+
+  .recipe-container-two {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .drink-name {
+    text-align: center;
+  }
+
+  .drink-ingredients {
+    text-align: center;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .input-and-btn {
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+  }
+
+  .random-btn-and-fav-btn {
+    margin-top: 0.25rem;
+    display: flex;
   }
 }

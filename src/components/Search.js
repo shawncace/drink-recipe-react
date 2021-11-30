@@ -97,7 +97,7 @@ const Search = () => {
         <div className='recipe-container-two'>
         <img src={drink.strDrinkThumb} alt=''/>
         
-        <div className="find-drink-container">
+        <div className="find-drink-container find-drink-container-mobile">
             <div className="drink-name">
               {drink.strDrink}
             </div>  
@@ -125,6 +125,8 @@ const Search = () => {
                     placeholder='Name'/>
               <button className='go-btn' onClick={handleClick}>GO</button>
               </div>
+            
+            <div className='random-btn-and-fav-btn'>
             <button className='random-bev-btn-two' onClick={handleRandomClick}>Random Beverage</button>
             
             {!toggleStar ? (<div>
@@ -137,6 +139,8 @@ const Search = () => {
         <i onClick={otherClick} className="fas fa-star">
         </i>
       </div>)}
+
+      </div>
             
         </div>
             
