@@ -44,7 +44,7 @@ body {
   align-items: center;
   /* outline: 1px solid red; */
   padding-bottom: 1rem;
-  border-bottom: 1px solid white;
+  /* border-bottom: 1px solid white; */
 }
 
 .section-title {
@@ -246,11 +246,14 @@ body {
 
 .fav-section {
   text-align: center;
+  min-width: 80%;
+  border-top: 1px solid white;
 }
 
 .favorites-container {
   display: flex;
-
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 
   /* outline: 1px solid red; */
