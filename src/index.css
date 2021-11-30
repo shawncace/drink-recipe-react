@@ -266,3 +266,22 @@ body {
   font-family: "Poppins";
   font-size: 0.8rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .pop-drink-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .img-container {
+    max-width: 280px;
+
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .popular-drink-name {
+    margin-bottom: 1.5rem;
+  }
+}
