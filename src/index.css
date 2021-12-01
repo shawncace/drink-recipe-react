@@ -34,7 +34,8 @@ body {
   border-bottom: 1px solid white;
   /* outline: 1px solid red; */
   margin-top: 2rem;
-  min-width: 80%;
+  width: 80%;
+
   padding-top: 0.25rem;
 }
 
@@ -80,7 +81,8 @@ body {
 
 .recipe-container {
   font-family: "Poppins", sans-serif;
-  min-width: 80vw;
+  width: 80vw;
+
   height: 100px;
   background-color: rgb(28, 7, 48);
   display: flex;
