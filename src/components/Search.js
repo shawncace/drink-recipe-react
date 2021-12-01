@@ -119,11 +119,14 @@ const Search = () => {
             
             <div className="input-and-btn">
               <div className='input-and-go-container'>
+                
                 <input onChange={(event)=>setSearchValue(event.target.value)}
                     value={searchValue}
                     onKeyPress={handleKeypress}
                     placeholder='Name'/>
-              <button className='go-btn' onClick={handleClick}>GO</button>
+                <button className='go-btn' onClick={handleClick}>GO</button>
+                
+                
               </div>
             
             <div className='random-btn-and-fav-btn'>
