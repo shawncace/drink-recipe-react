@@ -305,6 +305,8 @@ body {
   .recipe-container {
     display: flex;
     flex-direction: column;
+    /* outline: 1px solid red; */
+    width: 100vw;
   }
 
   .find-drink-container {
