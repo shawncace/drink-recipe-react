@@ -9,7 +9,7 @@ const Favorites = () => {
       {favoriteDrinks.length > 0 ? (
       <section className='fav-section'>
         
-        <div className='section-title'>
+        <div className='section-title title'>
           Favorites
         </div>
         

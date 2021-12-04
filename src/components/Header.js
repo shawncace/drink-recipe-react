@@ -39,7 +39,7 @@ const Header = () => {
       <h1 className='header'>The Drinktionary</h1>
       
       <div className='pop-drink-wrapper'>
-        <div>Popular Cocktails</div>
+        <div className='title'>Popular Cocktails</div>
         
         <div className="img-container">
         

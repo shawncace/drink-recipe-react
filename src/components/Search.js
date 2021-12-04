@@ -75,7 +75,7 @@ const Search = () => {
   return (  
     <>
      <section className='search-section'>
-      <div className='section-title'>Search for a Drink
+      <div className='section-title title'>Search for a Drink
       </div>
 
       {!searchStarted ? ( 
