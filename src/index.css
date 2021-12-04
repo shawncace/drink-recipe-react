@@ -277,7 +277,7 @@ body {
   font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .pop-drink-wrapper {
     display: flex;
     flex-direction: column;
@@ -317,7 +317,44 @@ body {
   }
 
   .random-bev-btn {
-    width: 80%;
+    width: 60%;
+  }
+
+  .recipe-container-two {
+    display: flex;
+    flex-direction: column;
+    min-width: 100vw;
+    align-items: center;
+  }
+
+  .drink-name {
+    text-align: center;
+  }
+
+  .drink-ingredients {
+    text-align: center;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .input-and-btn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .random-btn-and-fav-btn {
+    margin-top: 0.25rem;
+    display: flex;
+
+    width: 90%;
+  }
+
+  .random-bev-btn-two {
+    width: 80vw;
   }
 }
 
