@@ -277,7 +277,7 @@ body {
   font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   .pop-drink-wrapper {
     display: flex;
     flex-direction: column;
