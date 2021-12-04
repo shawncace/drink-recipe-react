@@ -347,14 +347,13 @@ body {
   }
 
   .input-and-go-container {
-    outline: 1px solid red;
     width: 250px;
   }
 
   .random-btn-and-fav-btn {
     margin-top: 0.25rem;
     display: flex;
-    outline: 1px solid red;
+
     width: 250px;
   }
 
