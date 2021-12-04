@@ -346,15 +346,20 @@ body {
     flex-direction: column;
   }
 
+  .input-and-go-container {
+    outline: 1px solid red;
+    width: 250px;
+  }
+
   .random-btn-and-fav-btn {
     margin-top: 0.25rem;
     display: flex;
-
-    width: 90%;
+    outline: 1px solid red;
+    width: 250px;
   }
 
   .random-bev-btn-two {
-    width: 80vw;
+    width: 80%;
   }
 }
 
