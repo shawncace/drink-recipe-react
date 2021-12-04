@@ -277,7 +277,7 @@ body {
   font-size: 0.8rem;
 }
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
   .pop-drink-wrapper {
     display: flex;
     flex-direction: column;
@@ -313,7 +313,11 @@ body {
   .recipe-container {
     display: flex;
     flex-direction: column;
+
     outline: 1px solid red;
+
+   
+
     width: 100vw;
   }
 
@@ -327,10 +331,23 @@ body {
 
   .find-drink-container button {
     padding: 0.5em 1em;
+
+   
+  }
+
+  .find-drink-container input {
+    height: 3em;
+  }
+
+  .find-drink-container button {
+    height: 3em;
+    padding: 0 1em;
   }
 
   .random-bev-btn {
     width: 85%;
+
+    height: 3em;
   }
 
   .recipe-container-two {
@@ -346,7 +363,7 @@ body {
 
   .drink-ingredients {
     text-align: center;
-    /* outline: 1px solid red; */
+   
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -355,7 +372,7 @@ body {
   }
 
   .input-and-btn {
-    /* outline: 1px solid red; */
+   
     display: flex;
     flex-direction: column;
   }
@@ -363,7 +380,7 @@ body {
   .random-btn-and-fav-btn {
     margin-top: 0.25rem;
     display: flex;
-    /* outline: 1px solid red; */
+    
     width: 90%;
   }
 
@@ -371,3 +388,4 @@ body {
     width: 80vw;
   }
 }
+ */
