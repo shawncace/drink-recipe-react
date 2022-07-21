@@ -5,8 +5,6 @@ import Search from "./components/Search";
 import Favorites from "./components/Favorites";
 
 function App() {
-  
-  
   return (
     <AppContextProvider>
       <div className='project-wrapper'>
