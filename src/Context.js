@@ -20,7 +20,7 @@ const AppContextProvider = (props) => {
     try{
       const response = await fetch(API_URL)
       const data = await response.json()
-
+        console.log(data.drinks)
         console.log(data.drinks[0].strDrink)
         
         
