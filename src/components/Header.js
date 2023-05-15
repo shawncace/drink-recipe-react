@@ -23,15 +23,10 @@ const Header = () => {
     } else{
       setToggleStar(false)
     }
-
     
-
     getDrink(e.target.alt)
     
     setSearchStarted(true)
-    
-    
-    
   }
 
   return (  
